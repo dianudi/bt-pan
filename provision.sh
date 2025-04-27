@@ -70,16 +70,16 @@ do
 done
 
 # Allow devices to pair if
-if [[ $START_ANNOUNCEMENT -eq 1 ]]; then
-    systemctl start systemd-networkd
-    systemctl start bt-agent
-    systemctl start bt-network
+# if [[ $START_ANNOUNCEMENT -eq 1 ]]; then
+#     systemctl start systemd-networkd
+#     systemctl start bt-agent
+#     systemctl start bt-network
 
-    # Sleep to allow all the services to raise
-    sleep 2
+#     # Sleep to allow all the services to raise
+#     sleep 2
 
-    bt-adapter --set Discoverable 1
-fi
+#     bt-adapter --set Discoverable 1
+# fi
 
 
 
