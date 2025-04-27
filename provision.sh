@@ -65,7 +65,7 @@ SERVICES=( "systemd-networkd" "bt-network" "bt-agent" )
 for SERVICE in ${SERVICES[@]}
 do
     if ! systemctl is-enabled $SERVICE > /dev/null; then
-        systemctl enable $SERVICE
+        systemctl enable $SERVICE --now
     fi
 done
 
